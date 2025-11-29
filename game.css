@@ -1,0 +1,121 @@
+#bg-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+  #gameover-screen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9998;
+    display: none;
+  }
+
+#retry, 
+#home {
+  position: fixed;
+  width: 100px;
+  bottom: 50px;
+  z-index: 999999; 
+  cursor: pointer;
+  display: none;
+}
+
+#retry {
+  right: 100px;    
+  transition: 0.3s ease-in-out;  
+}
+
+#retry:hover {
+  transform: scale(1.2);
+  
+}
+
+.star-icon {
+    background-image: url("star.png");
+  filter: drop-shadow(0 0 40px #ffffff55);  
+}
+
+.astronaut-icon {
+    background-image: url("astronaut.png");
+}
+
+#home {
+  left: 100px;  
+  transition: 0.3s ease-in-out; 
+}
+
+#home:hover {
+  transform: scale(1.2);
+     
+}
+  
+body.gameover {
+  background: url('gameover.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+#level1bg-float {
+  animation: float 4s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#level1bg {
+  position: absolute;
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    z-index: 4;   /* BEHIND THE CANVAS */
+    filter: brightness(50%);
+}
+#myCanvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  width: 600px;
+  height: 450px;
+  border: 2px solid #fff;
+  z-index: 5;
+}
+
+#myCanvas {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translate(-50%, -50%) translateY(0); }
+  50%  { transform: translate(-50%, -50%) translateY(-20px); }
+  100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+
+#tvFrame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1440px;
+  height: 810px;  
+  pointer-events: none; 
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px #ff34f555);
+  z-index: 6;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Star Catchers!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+
+  <video autoplay muted loop playsinline id="bg-video">
+      <source src="background-loop.mp4" type="video/mp4">
+  </video>
+
+<div class="hero-center">
+
+  <div class="slide-up">
+    <div class="container">
+      <div class="logo">
+          <img id="logo" src="logo1.png" alt="logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-wrapper menu-appear">
+    <div class="menu-row">
+      <a href="difficulty.html"><img class="menu-button" src="play1.png" alt="Play"></a> 
+      <a href=""><img class="menu-button" src="story.png" alt="Story"></a>
+    </div>
+    <div class="menu-row">
+      <a href="htp.html"><img class="menu-button" src="htp.png" alt="How To Play"></a>
+      <a href="extras.html"><img class="menu-button" src="extras.png" alt="Extras"></a>
+    </div>
+  </div>
+
+  
+</div>
+
+<audio id="bgm" src="homepage.mp3" loop></audio>
+
+<div class="volume-float">
+    <img id="volumebutton" class="volumebutton" src="volume-on.png" alt="volume button">
+</div>
+
+
+<script>
+const bgm = document.getElementById("bgm");
+const mutebutton = document.getElementById("volumebutton");
+
+window.onload = function() {
+    bgm.volume = 0.1;
+    bgm.play();
+};
+
+ let muted = false;
+
+  mutebutton.addEventListener("click", () => {
+    muted = !muted;
+
+    if (muted) {
+      bgm.pause();
+      mutebutton.src = "volume-off.png";
+    } else {
+      bgm.play();
+      mutebutton.src = "volume-on.png";
+    }
+});
+</script>
+
+</body>
+</html>
