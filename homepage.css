@@ -15,6 +15,10 @@ body {
   height: 100vh;
 }
 
+#howtoplayscreen2 {
+  z-index: 9999;
+}
+
 .hero-center {
   position: absolute;
   top: 50%;

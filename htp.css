@@ -1,0 +1,60 @@
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#howtoplayscreen {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 7s ease-in-out infinite;
+  
+}
+
+
+
+#howtoplayscreen2 {
+  width: 90%;       
+  height: auto;
+    filter: drop-shadow(0 0 40px #925aa8a1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.backbutton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;  
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 0 10px #00000055);
+  z-index: 9999;
+}
+
+
+.backbutton:hover {
+  transform: scale(1.15);
+}
