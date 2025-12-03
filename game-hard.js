@@ -31,7 +31,7 @@ let gameover = false;
 let level = 0;
 let objects = [];
 let misses = 0; // stars that hit the ground
-let maxMisses = 5;
+let maxMisses = 7;
 
 
 //random number generator for fall speed and spawning positions
