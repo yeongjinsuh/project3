@@ -119,3 +119,20 @@ body.gameover {
   filter: drop-shadow(0 0 40px #ff34f555);
   z-index: 6;
 }
+
+.backbutton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;  
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  filter: drop-shadow(0 0 10px #00000055);
+  z-index: 5;
+}
+
+
+.backbutton:hover {
+  transform: scale(1.15);
+}
