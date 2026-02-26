@@ -125,3 +125,12 @@ body {
 .volumebutton:hover {
   transform: scale(1.15);
 }
+
+.imd-logo {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  width: 60px; 
+  z-index: 999;
+  animation: float 3s ease-in-out infinite;
+}
